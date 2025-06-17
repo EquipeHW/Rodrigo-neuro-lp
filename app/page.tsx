@@ -158,115 +158,117 @@ export default function NeuropsicologiaSite() {
         </nav>
       </header>
 
-      {/* Hero Section */}
-      <section
-        className="relative pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden"
-        style={{
-          background: "linear-gradient(135deg, #f8fafc 0%, #e2e8f0 60%, #ccc 100%)",
-        }}
-        id="home"
-      >
-        {/* Elementos decorativos de fundo */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-20 left-10 w-32 h-32 bg-blue-100 rounded-full opacity-10 blur-3xl"></div>
-          <div className="absolute bottom-20 right-10 w-40 h-40 bg-gray-200 rounded-full opacity-15 blur-3xl"></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full opacity-5 blur-3xl" style={{ backgroundColor: "#002147" }}></div>
+  {/* Hero Section */}
+<section
+  className="relative pt-24 pb-16 md:pt-32 md:pb-20 lg:pt-20 lg:pb-20 overflow-hidden"
+  style={{
+    background: "linear-gradient(135deg, #f8fafc 0%, #e2e8f0 60%, #ccc 100%) center/cover no-repeat",
+  }}
+  id="home"
+>
+  {/* Elementos decorativos de fundo */}
+  <div className="absolute inset-0 overflow-hidden pointer-events-none">
+    <div className="absolute top-10 left-4 w-20 h-20 md:top-20 md:left-10 md:w-32 md:h-32 bg-blue-100 rounded-full opacity-10 blur-xl md:blur-3xl"></div>
+    <div className="absolute bottom-10 right-4 w-24 h-24 md:bottom-20 md:right-10 md:w-40 md:h-40 bg-gray-200 rounded-full opacity-15 blur-xl md:blur-3xl"></div>
+    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 md:w-96 md:h-96 rounded-full opacity-5 blur-xl md:blur-3xl" style={{ backgroundColor: "#002147" }}></div>
+    
+    {/* Padrões decorativos adicionais */}
+    <div className="absolute top-20 right-8 w-16 h-16 md:top-40 md:right-20 md:w-24 md:h-24 bg-blue-50 rounded-full opacity-20"></div>
+    <div className="absolute bottom-20 left-8 w-14 h-14 md:bottom-40 md:left-20 md:w-20 md:h-20 bg-gray-100 rounded-full opacity-20"></div>
+    
+    {/* Linhas decorativas */}
+    <div className="absolute top-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent opacity-30"></div>
+    <div className="absolute bottom-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent opacity-30"></div>
+  </div>
+
+  <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="max-w-7xl mx-auto">
+      <div className="flex flex-col lg:flex-row gap-8 md:gap-12 lg:gap-16 items-center">
+        {/* Conteúdo Textual - Lado Esquerdo */}
+        <div className="text-center lg:text-left relative order-1 lg:order-1 w-full lg:w-1/2">
+          {/* Elementos decorativos do texto */}
+          <div className="absolute -top-4 -left-4 w-8 h-8 md:-top-6 md:-left-6 md:w-12 md:h-12 bg-blue-50 rounded-full opacity-20"></div>
+          <div className="absolute -bottom-2 -right-2 w-6 h-6 md:-bottom-4 md:-right-4 md:w-8 md:h-8 bg-gray-100 rounded-full opacity-20"></div>
           
-          {/* Padrões decorativos adicionais */}
-          <div className="absolute top-40 right-20 w-24 h-24 bg-blue-50 rounded-full opacity-20"></div>
-          <div className="absolute bottom-40 left-20 w-20 h-20 bg-gray-100 rounded-full opacity-20"></div>
-          
-          {/* Linhas decorativas */}
-          <div className="absolute top-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent opacity-30"></div>
-          <div className="absolute bottom-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent opacity-30"></div>
+          <Badge className="mb-6 md:mb-8 bg-gray-100 text-gray-700 hover:bg-gray-200 px-3 py-1 md:px-4 md:py-2 text-xs md:text-sm font-medium border-0 shadow-sm">
+            CRP 18/04819 - Especialista em Neuropsicologia
+          </Badge>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-light mb-6 md:mb-8 leading-tight" style={{ color: "#002147" }}>
+            Psicólogo Rodrigo Lübke
+          </h1>
+          <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-8 md:mb-12 font-light leading-relaxed">
+            Clareza emocional e diagnóstica para transformar a jornada terapêutica de adultos e crianças
+          </p>
+          <Button
+            size="lg"
+            className="text-white px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 text-base sm:text-lg md:text-xl font-medium rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl relative overflow-hidden group"
+            style={{ backgroundColor: "#002147" }}
+            onClick={() => window.open(whatsappUrl, "_blank")}
+            onMouseEnter={(e) => (e.target.style.backgroundColor = "#001a36")}
+            onMouseLeave={(e) => (e.target.style.backgroundColor = "#002147")}
+          >
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+            <MessageCircle className="mr-2 h-5 w-5 sm:h-6 sm:w-6" />
+            <span className="hidden sm:inline">Agende sua avaliação pelo WhatsApp</span>
+            <span className="sm:hidden">Agendar pelo WhatsApp</span>
+          </Button>
         </div>
 
-        <div className="container mx-auto px-4 lg:px-6">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid lg:grid-cols-2 gap-16 items-center">
-              {/* Conteúdo Textual - Lado Esquerdo */}
-              <div className="text-center lg:text-left relative">
-                {/* Elementos decorativos do texto */}
-                <div className="absolute -top-6 -left-6 w-12 h-12 bg-blue-50 rounded-full opacity-20"></div>
-                <div className="absolute -bottom-4 -right-4 w-8 h-8 bg-gray-100 rounded-full opacity-20"></div>
-                
-                <Badge className="mb-8 bg-gray-100 text-gray-700 hover:bg-gray-200 px-4 py-2 text-sm font-medium border-0 shadow-sm">
-                  CRP 18/04819 - Especialista em Neuropsicologia
-                </Badge>
-                <h1 className="text-4xl lg:text-5xl xl:text-6xl font-light mb-8 leading-tight" style={{ color: "#002147" }}>
-                  Psicólogo Rodrigo Lübke
-                </h1>
-                <p className="text-xl lg:text-2xl text-gray-600 mb-12 font-light leading-relaxed">
-                  Clareza emocional e diagnóstica para transformar a jornada terapêutica de adultos e crianças
-                </p>
-                <Button
-                  size="lg"
-                  className="text-white px-10 py-5 text-xl font-medium rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl relative overflow-hidden group"
-                  style={{ backgroundColor: "#002147" }}
-                  onClick={() => window.open(whatsappUrl, "_blank")}
-                  onMouseEnter={(e) => (e.target.style.backgroundColor = "#001a36")}
-                  onMouseLeave={(e) => (e.target.style.backgroundColor = "#002147")}
-                >
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
-                  <MessageCircle className="mr-3 h-6 w-6" />
-                  Agende sua avaliação pelo WhatsApp
-                </Button>
+        {/* Área da Foto - Lado Direito */}
+        <div className="relative flex justify-center mt-16 lg:justify-end order-2 lg:order-2 w-full lg:w-1/2 mb-8 lg:mb-0">
+          <div className="relative">
+            {/* Fundo científico minimalista */}
+            <div className="w-72 h-72 sm:w-56  sm:h-56 md:w-64 md:h-64 lg:w-80 lg:h-80 xl:w-[36rem] xl:h-[36rem] rounded-full bg-gray-100 relative overflow-hidden shadow-xl md:shadow-2xl flex items-center justify-center">
+              {/* Elementos decorativos científicos */}
+              <div className="absolute top-4 left-4 sm:top-6 sm:left-6 md:top-8 md:left-8 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-gray-200 rounded-full opacity-40"></div>
+              <div className="absolute bottom-6 right-6 sm:bottom-8 sm:right-8 md:bottom-12 md:right-12 w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 bg-gray-300 rounded-full opacity-30"></div>
+              <div className="absolute top-1/2 left-2 sm:left-3 md:left-4 w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 bg-gray-200 rounded-full opacity-25"></div>
+
+              {/* Padrão de conexões neurais sutil */}
+              <div className="absolute inset-0 opacity-10">
+                <svg className="w-full h-full" viewBox="0 0 400 400" fill="none">
+                  <circle cx="100" cy="100" r="3" fill="#002147" />
+                  <circle cx="300" cy="150" r="2" fill="#002147" />
+                  <circle cx="200" cy="300" r="3" fill="#002147" />
+                  <circle cx="350" cy="280" r="2" fill="#002147" />
+                  <line x1="100" y1="100" x2="300" y2="150" stroke="#002147" strokeWidth="1" opacity="0.3" />
+                  <line x1="300" y1="150" x2="200" y2="300" stroke="#002147" strokeWidth="1" opacity="0.3" />
+                  <line x1="200" y1="300" x2="350" y2="280" stroke="#002147" strokeWidth="1" opacity="0.3" />
+                </svg>
               </div>
 
-              {/* Área da Foto - Lado Direito */}
-              <div className="relative flex justify-center lg:justify-end">
-                <div className="relative">
-                  {/* Fundo científico minimalista */}
-                  <div className="w-72 h-72 lg:w-[36rem] lg:h-[36rem] rounded-full bg-gray-100 relative overflow-hidden shadow-2xl flex items-center justify-center">
-                    {/* Elementos decorativos científicos */}
-                    <div className="absolute top-8 left-8 w-12 h-12 bg-gray-200 rounded-full opacity-40"></div>
-                    <div className="absolute bottom-12 right-12 w-8 h-8 bg-gray-300 rounded-full opacity-30"></div>
-                    <div className="absolute top-1/2 left-4 w-6 h-6 bg-gray-200 rounded-full opacity-25"></div>
-
-                    {/* Padrão de conexões neurais sutil */}
-                    <div className="absolute inset-0 opacity-10">
-                      <svg className="w-full h-full" viewBox="0 0 400 400" fill="none">
-                        <circle cx="100" cy="100" r="3" fill="#002147" />
-                        <circle cx="300" cy="150" r="2" fill="#002147" />
-                        <circle cx="200" cy="300" r="3" fill="#002147" />
-                        <circle cx="350" cy="280" r="2" fill="#002147" />
-                        <line x1="100" y1="100" x2="300" y2="150" stroke="#002147" strokeWidth="1" opacity="0.3" />
-                        <line x1="300" y1="150" x2="200" y2="300" stroke="#002147" strokeWidth="1" opacity="0.3" />
-                        <line x1="200" y1="300" x2="350" y2="280" stroke="#002147" strokeWidth="1" opacity="0.3" />
-                      </svg>
-                    </div>
-
-                    {/* A imagem diretamente dentro deste container */}
-                    <Image
-                      src="/rodrigo1.jpg"
-                      alt="Psicólogo Rodrigo Lübke"
-                      width={600}
-                      height={600}
-                      className="w-full h-full shadow-md object-cover object-[center_30%] rounded-full"
-                    />
-                  </div>
-
-                  {/* Elementos decorativos externos */}
-                  <div className="absolute -top-6 -right-6 w-20 h-20 rounded-full opacity-15" style={{ backgroundColor: "#002147" }}></div>
-                  <div className="absolute -bottom-4 -left-4 w-20 h-16 bg-gray-300 rounded-full opacity-20"></div>
-
-                  {/* Ícones científicos flutuantes */}
-                  <div className="absolute top-12 -left-8 text-gray-300 opacity-20">
-                    <BarChart3 className="w-6 h-6" />
-                  </div>
-                  <div className="absolute bottom-16 -right-8 text-gray-300 opacity-20">
-                    <Search className="w-5 h-5" />
-                  </div>
-                  
-                  {/* Elementos decorativos adicionais */}
-                  <div className="absolute top-1/2 -right-4 w-8 h-8 bg-blue-50 rounded-full opacity-20"></div>
-                  <div className="absolute bottom-1/2 -left-4 w-6 h-6 bg-gray-100 rounded-full opacity-20"></div>
-                </div>
-              </div>
+              {/* A imagem diretamente dentro deste container */}
+              <Image
+                src="/rodrigo1.jpg"
+                alt="Psicólogo Rodrigo Lübke"
+                width={600}
+                height={600}
+                className="w-full h-full shadow-md object-cover object-[center_30%] rounded-full"
+                priority
+              />
             </div>
+
+            {/* Elementos decorativos externos */}
+            <div className="absolute -top-4 -right-4 sm:-top-5 sm:-right-5 md:-top-6 md:-right-6 w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-full opacity-15" style={{ backgroundColor: "#002147" }}></div>
+            <div className="absolute -bottom-2 -left-2 sm:-bottom-3 sm:-left-3 md:-bottom-4 md:-left-4 w-12 h-10 sm:w-16 sm:h-14 md:w-20 md:h-16 bg-gray-300 rounded-full opacity-20"></div>
+
+            {/* Ícones científicos flutuantes */}
+            <div className="absolute top-6 -left-4 sm:top-8 sm:-left-6 md:top-12 md:-left-8 text-gray-300 opacity-20">
+              <BarChart3 className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
+            </div>
+            <div className="absolute bottom-8 -right-4 sm:bottom-10 sm:-right-6 md:bottom-16 md:-right-8 text-gray-300 opacity-20">
+              <Search className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5" />
+            </div>
+            
+            {/* Elementos decorativos adicionais */}
+            <div className="absolute top-1/2 -right-2 sm:-right-3 md:-right-4 w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 bg-blue-50 rounded-full opacity-20"></div>
+            <div className="absolute bottom-1/2 -left-2 sm:-left-3 md:-left-4 w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 bg-gray-100 rounded-full opacity-20"></div>
           </div>
         </div>
-      </section>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* Avaliação Neuropsicológica Section */}
       <section
