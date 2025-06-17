@@ -217,7 +217,7 @@ export default function NeuropsicologiaSite() {
               <div className="relative flex justify-center lg:justify-end">
                 <div className="relative">
                   {/* Fundo científico minimalista */}
-                  <div className="w-72 h-72 lg:w-[40rem] lg:h-[40rem] rounded-full bg-gray-100 relative overflow-hidden shadow-2xl flex items-center justify-center">
+                  <div className="w-72 h-72 lg:w-[36rem] lg:h-[36rem] rounded-full bg-gray-100 relative overflow-hidden shadow-2xl flex items-center justify-center">
                     {/* Elementos decorativos científicos */}
                     <div className="absolute top-8 left-8 w-12 h-12 bg-gray-200 rounded-full opacity-40"></div>
                     <div className="absolute bottom-12 right-12 w-8 h-8 bg-gray-300 rounded-full opacity-30"></div>
