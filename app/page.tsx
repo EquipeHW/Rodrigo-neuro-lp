@@ -162,7 +162,7 @@ export default function NeuropsicologiaSite() {
       <section
         className="relative pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden"
         style={{
-          background: "linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%)",
+          background: "linear-gradient(135deg, #f8fafc 0%, #e2e8f0 60%, #ccc 100%)",
         }}
         id="home"
       >
@@ -217,7 +217,7 @@ export default function NeuropsicologiaSite() {
               <div className="relative flex justify-center lg:justify-end">
                 <div className="relative">
                   {/* Fundo científico minimalista */}
-                  <div className="w-80 h-80 lg:w-[40rem] lg:h-[40rem] rounded-full bg-gray-100 relative overflow-hidden shadow-2xl flex items-center justify-center">
+                  <div className="w-72 h-72 lg:w-[40rem] lg:h-[40rem] rounded-full bg-gray-100 relative overflow-hidden shadow-2xl flex items-center justify-center">
                     {/* Elementos decorativos científicos */}
                     <div className="absolute top-8 left-8 w-12 h-12 bg-gray-200 rounded-full opacity-40"></div>
                     <div className="absolute bottom-12 right-12 w-8 h-8 bg-gray-300 rounded-full opacity-30"></div>
@@ -240,9 +240,9 @@ export default function NeuropsicologiaSite() {
                     <Image
                       src="/rodrigo1.jpg"
                       alt="Psicólogo Rodrigo Lübke"
-                      width={1000}
-                      height={1000}
-                      className="w-full h-full object-cover object-[center_30%] rounded-full"
+                      width={600}
+                      height={600}
+                      className="w-full h-full shadow-md object-cover object-[center_30%] rounded-full"
                     />
                   </div>
 
@@ -269,7 +269,10 @@ export default function NeuropsicologiaSite() {
       </section>
 
       {/* Avaliação Neuropsicológica Section */}
-      <section className="py-24 bg-white relative overflow-hidden" id="avaliacao">
+      <section
+        className="py-24 bg-white relative overflow-hidden"
+        id="avaliacao"
+      >
         {/* Elementos decorativos de fundo */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           {/* Círculos grandes com blur */}
@@ -316,7 +319,7 @@ export default function NeuropsicologiaSite() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-20 relative">
               <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 w-12 h-12 bg-blue-50 rounded-full opacity-20"></div>
-              <h2 className="text-3xl lg:text-4xl font-light mb-8" style={{ color: "#002147" }}>
+              <h2 className="text-3xl lg:text-4xl font-light mb-8 text-black">
                 Avaliação Neuropsicológica
               </h2>
               <div className="w-24 h-1 bg-gray-200 mx-auto rounded-full"></div>
@@ -329,70 +332,84 @@ export default function NeuropsicologiaSite() {
             </div>
 
             {/* Indicações Comuns */}
-            <div className="mb-20 relative">
+            <div className="mb-20 relative bg-[#002147] rounded-xl p-8">
               <div className="absolute -top-6 -right-6 w-12 h-12 bg-blue-50 rounded-full opacity-20"></div>
-              <h3 className="text-2xl font-medium text-center mb-12" style={{ color: "#002147" }}>
+              <h3 className="text-2xl font-medium text-center mb-12 text-white">
                 Indicações Comuns
               </h3>
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <Card className="hover:shadow-md transition-all duration-300 border-gray-100 bg-white/80 backdrop-blur-sm">
-                  <CardHeader className="text-center pb-4">
-                    <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                      <Brain className="h-6 w-6" style={{ color: "#002147" }} />
-                    </div>
-                    <CardTitle className="text-gray-900 font-medium text-sm">
-                      Suspeitas de TDAH, TEA ou dificuldades de aprendizagem
-                    </CardTitle>
-                  </CardHeader>
-                </Card>
+              
+              {/* Container principal com flex (equivalente à row do Bootstrap) */}
+              <div className="flex flex-wrap justify-center -mx-3"> {/* justify-center substitui justify-content-center */}
+                
+                {/* Cards - cada um com classes de width responsivo (equivalente às cols) */}
+                <div className="w-full md:w-1/2 lg:w-1/3 px-3 mb-6">
+                  <Card className="hover:shadow-md transition-all duration-300 border-gray-100 bg-white/80 backdrop-blur-sm h-full">
+                    <CardHeader className="text-center pb-4">
+                      <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <Brain className="h-6 w-6" style={{ color: "#002147" }} />
+                      </div>
+                      <CardTitle className="text-gray-900 font-medium text-sm">
+                        Suspeitas de TDAH, TEA ou dificuldades de aprendizagem
+                      </CardTitle>
+                    </CardHeader>
+                  </Card>
+                </div>
 
-                <Card className="hover:shadow-md transition-all duration-300 border-gray-100 bg-white/80 backdrop-blur-sm">
-                  <CardHeader className="text-center pb-4">
-                    <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                      <Zap className="h-6 w-6" style={{ color: "#002147" }} />
-                    </div>
-                    <CardTitle className="text-gray-900 font-medium text-sm">
-                      Ansiedade, desorganização, impulsividade
-                    </CardTitle>
-                  </CardHeader>
-                </Card>
+                <div className="w-full md:w-1/2 lg:w-1/3 px-3 mb-6">
+                  <Card className="hover:shadow-md transition-all duration-300 border-gray-100 bg-white/80 backdrop-blur-sm h-full">
+                    <CardHeader className="text-center pb-4">
+                      <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <Zap className="h-6 w-6" style={{ color: "#002147" }} />
+                      </div>
+                      <CardTitle className="text-gray-900 font-medium text-sm">
+                        Ansiedade, desorganização, impulsividade
+                      </CardTitle>
+                    </CardHeader>
+                  </Card>
+                </div>
 
-                <Card className="hover:shadow-md transition-all duration-300 border-gray-100 bg-white/80 backdrop-blur-sm">
-                  <CardHeader className="text-center pb-4">
-                    <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                      <Heart className="h-6 w-6" style={{ color: "#002147" }} />
-                    </div>
-                    <CardTitle className="text-gray-900 font-medium text-sm">
-                      Baixa autoestima, desmotivação, falta de foco
-                    </CardTitle>
-                  </CardHeader>
-                </Card>
+                <div className="w-full md:w-1/2 lg:w-1/3 px-3 mb-6">
+                  <Card className="hover:shadow-md transition-all duration-300 border-gray-100 bg-white/80 backdrop-blur-sm h-full">
+                    <CardHeader className="text-center pb-4">
+                      <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <Heart className="h-6 w-6" style={{ color: "#002147" }} />
+                      </div>
+                      <CardTitle className="text-gray-900 font-medium text-sm">
+                        Baixa autoestima, desmotivação, falta de foco
+                      </CardTitle>
+                    </CardHeader>
+                  </Card>
+                </div>
 
-                <Card className="hover:shadow-md transition-all duration-300 border-gray-100 bg-white/80 backdrop-blur-sm">
-                  <CardHeader className="text-center pb-4">
-                    <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                      <Search className="h-6 w-6" style={{ color: "#002147" }} />
-                    </div>
-                    <CardTitle className="text-gray-900 font-medium text-sm">
-                      Queixas de memória ou declínio cognitivo
-                    </CardTitle>
-                  </CardHeader>
-                </Card>
+                <div className="w-full md:w-1/2 lg:w-1/3 px-3 mb-6">
+                  <Card className="hover:shadow-md transition-all duration-300 border-gray-100 bg-white/80 backdrop-blur-sm h-full">
+                    <CardHeader className="text-center pb-4">
+                      <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <Search className="h-6 w-6" style={{ color: "#002147" }} />
+                      </div>
+                      <CardTitle className="text-gray-900 font-medium text-sm">
+                        Queixas de memória ou declínio cognitivo
+                      </CardTitle>
+                    </CardHeader>
+                  </Card>
+                </div>
 
-                <Card className="hover:shadow-md transition-all duration-300 border-gray-100 bg-white/80 backdrop-blur-sm md:col-span-2 lg:col-span-1">
-                  <CardHeader className="text-center pb-4">
-                    <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                      <FileText className="h-6 w-6" style={{ color: "#002147" }} />
-                    </div>
-                    <CardTitle className="text-gray-900 font-medium text-sm">
-                      Dúvidas diagnósticas e planos terapêuticos
-                    </CardTitle>
-                  </CardHeader>
-                </Card>
+                <div className="w-full md:w-1/2 lg:w-1/3 px-3 mb-6">
+                  <Card className="hover:shadow-md transition-all duration-300 border-gray-100 bg-white/80 backdrop-blur-sm h-full">
+                    <CardHeader className="text-center pb-4">
+                      <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <FileText className="h-6 w-6" style={{ color: "#002147" }} />
+                      </div>
+                      <CardTitle className="text-gray-900 font-medium text-sm">
+                        Dúvidas diagnósticas e planos terapêuticos
+                      </CardTitle>
+                    </CardHeader>
+                  </Card>
+                </div>
               </div>
             </div>
 
-            {/* Processo Timeline */}
+            {/* Processo Timeline - Mantido com grid original */}
             <div className="mb-16 relative">
               <div className="absolute -top-6 -left-6 w-12 h-12 bg-blue-50 rounded-full opacity-20"></div>
               <h3 className="text-2xl font-medium text-center mb-12" style={{ color: "#002147" }}>
@@ -486,56 +503,73 @@ export default function NeuropsicologiaSite() {
               Por que escolher minha avaliação?
             </h2>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-              <Card className="group hover:shadow-md transition-all duration-300 bg-white border-gray-100">
-                <CardHeader>
-                  <div className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center mb-6 group-hover:bg-gray-200 transition-colors">
-                    <Target className="h-5 w-5" style={{ color: "#002147" }} />
-                  </div>
-                  <CardTitle className="text-gray-900 font-medium mb-2">Avaliação que gera mudança</CardTitle>
-                  <CardDescription className="text-gray-500">Laudo + plano de ação claro</CardDescription>
-                </CardHeader>
-              </Card>
+            {/* Container flexível similar ao Bootstrap */}
+            <div className="flex flex-wrap justify-center -mx-3 mb-16"> {/* justify-center e negative margin */}
+              
+              {/* Card 1 */}
+              <div className="w-full md:w-1/2 lg:w-1/3 px-3 mb-6">
+                <Card className="group hover:shadow-md transition-all duration-300 bg-white border-gray-100 h-full">
+                  <CardHeader>
+                    <div className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center mb-6 group-hover:bg-gray-200 transition-colors">
+                      <Target className="h-5 w-5" style={{ color: "#002147" }} />
+                    </div>
+                    <CardTitle className="text-gray-900 font-medium mb-2">Avaliação que gera mudança</CardTitle>
+                    <CardDescription className="text-gray-500">Laudo + plano de ação claro</CardDescription>
+                  </CardHeader>
+                </Card>
+              </div>
 
-              <Card className="group hover:shadow-md transition-all duration-300 bg-white border-gray-100">
-                <CardHeader>
-                  <div className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center mb-6 group-hover:bg-gray-200 transition-colors">
-                    <BarChart3 className="h-5 w-5" style={{ color: "#002147" }} />
-                  </div>
-                  <CardTitle className="text-gray-900 font-medium mb-2">Instrumentos atualizados</CardTitle>
-                  <CardDescription className="text-gray-500">Testes validados para todas as idades</CardDescription>
-                </CardHeader>
-              </Card>
+              {/* Card 2 */}
+              <div className="w-full md:w-1/2 lg:w-1/3 px-3 mb-6">
+                <Card className="group hover:shadow-md transition-all duration-300 bg-white border-gray-100 h-full">
+                  <CardHeader>
+                    <div className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center mb-6 group-hover:bg-gray-200 transition-colors">
+                      <BarChart3 className="h-5 w-5" style={{ color: "#002147" }} />
+                    </div>
+                    <CardTitle className="text-gray-900 font-medium mb-2">Instrumentos atualizados</CardTitle>
+                    <CardDescription className="text-gray-500">Testes validados para todas as idades</CardDescription>
+                  </CardHeader>
+                </Card>
+              </div>
 
-              <Card className="group hover:shadow-md transition-all duration-300 bg-white border-gray-100">
-                <CardHeader>
-                  <div className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center mb-6 group-hover:bg-gray-200 transition-colors">
-                    <Lightbulb className="h-5 w-5" style={{ color: "#002147" }} />
-                  </div>
-                  <CardTitle className="text-gray-900 font-medium mb-2">Processo personalizado</CardTitle>
-                  <CardDescription className="text-gray-500">Escuta ativa e abordagem individual</CardDescription>
-                </CardHeader>
-              </Card>
+              {/* Card 3 */}
+              <div className="w-full md:w-1/2 lg:w-1/3 px-3 mb-6">
+                <Card className="group hover:shadow-md transition-all duration-300 bg-white border-gray-100 h-full">
+                  <CardHeader>
+                    <div className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center mb-6 group-hover:bg-gray-200 transition-colors">
+                      <Lightbulb className="h-5 w-5" style={{ color: "#002147" }} />
+                    </div>
+                    <CardTitle className="text-gray-900 font-medium mb-2">Processo personalizado</CardTitle>
+                    <CardDescription className="text-gray-500">Escuta ativa e abordagem individual</CardDescription>
+                  </CardHeader>
+                </Card>
+              </div>
 
-              <Card className="group hover:shadow-md transition-all duration-300 bg-white border-gray-100">
-                <CardHeader>
-                  <div className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center mb-6 group-hover:bg-gray-200 transition-colors">
-                    <Brain className="h-5 w-5" style={{ color: "#002147" }} />
-                  </div>
-                  <CardTitle className="text-gray-900 font-medium mb-2">Integração com terapia</CardTitle>
-                  <CardDescription className="text-gray-500">Resultados que direcionam intervenções</CardDescription>
-                </CardHeader>
-              </Card>
+              {/* Card 4 */}
+              <div className="w-full md:w-1/2 lg:w-1/3 px-3 mb-6">
+                <Card className="group hover:shadow-md transition-all duration-300 bg-white border-gray-100 h-full">
+                  <CardHeader>
+                    <div className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center mb-6 group-hover:bg-gray-200 transition-colors">
+                      <Brain className="h-5 w-5" style={{ color: "#002147" }} />
+                    </div>
+                    <CardTitle className="text-gray-900 font-medium mb-2">Integração com terapia</CardTitle>
+                    <CardDescription className="text-gray-500">Resultados que direcionam intervenções</CardDescription>
+                  </CardHeader>
+                </Card>
+              </div>
 
-              <Card className="group hover:shadow-md transition-all duration-300 bg-white border-gray-100 md:col-span-2 lg:col-span-1">
-                <CardHeader>
-                  <div className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center mb-6 group-hover:bg-gray-200 transition-colors">
-                    <Calendar className="h-5 w-5" style={{ color: "#002147" }} />
-                  </div>
-                  <CardTitle className="text-gray-900 font-medium mb-2">Acompanhamento organizado</CardTitle>
-                  <CardDescription className="text-gray-500">Suporte desde o primeiro contato</CardDescription>
-                </CardHeader>
-              </Card>
+              {/* Card 5 - Ocupa 1 coluna em todas as telas */}
+              <div className="w-full md:w-1/2 lg:w-1/3 px-3 mb-6">
+                <Card className="group hover:shadow-md transition-all duration-300 bg-white border-gray-100 h-full">
+                  <CardHeader>
+                    <div className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center mb-6 group-hover:bg-gray-200 transition-colors">
+                      <Calendar className="h-5 w-5" style={{ color: "#002147" }} />
+                    </div>
+                    <CardTitle className="text-gray-900 font-medium mb-2">Acompanhamento organizado</CardTitle>
+                    <CardDescription className="text-gray-500">Suporte desde o primeiro contato</CardDescription>
+                  </CardHeader>
+                </Card>
+              </div>
             </div>
 
             <div className="text-center">
@@ -553,7 +587,7 @@ export default function NeuropsicologiaSite() {
                   e.target.style.color = "#002147"
                 }}
               >
-               Agendar consulta
+                Agendar consulta
               </Button>
             </div>
           </div>
@@ -575,7 +609,7 @@ export default function NeuropsicologiaSite() {
 
         <div className="container mx-auto px-4 lg:px-6">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-20 relative">
+            <div className="text-center mb-14 relative">
               <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 w-12 h-12 bg-blue-50 rounded-full opacity-20"></div>
               <h2 className="text-3xl lg:text-4xl font-light mb-8" style={{ color: "#002147" }}>
                 Conheça o Psicólogo Rodrigo Lübke
@@ -652,8 +686,8 @@ export default function NeuropsicologiaSite() {
                     <Image
                       src="/rodrigo2.png"
                       alt="Psicólogo Rodrigo Lübke - Especialista em Neuropsicologia"
-                      width={400}
-                      height={400}
+                      width={600}
+                      height={600}
                       className="rounded-xl shadow-xl"
                     />
                   </div>
@@ -673,11 +707,11 @@ export default function NeuropsicologiaSite() {
       </section>
 
       {/* Depoimentos Section */}
-      <section className="py-24 bg-gray-50" id="depoimentos">
+      <section className="py-24 bg-[#002147]" id="depoimentos">
         <div className="container mx-auto px-4 lg:px-6">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl lg:text-4xl font-light text-center mb-20" style={{ color: "#002147" }}>
-              O que dizem pacientes e familiares
+            <h2 className="text-3xl lg:text-4xl font-light text-center mb-20" style={{ color: "#fff" }}>
+              O que dizem meus pacientes
             </h2>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -916,7 +950,7 @@ export default function NeuropsicologiaSite() {
 
               <div className="flex flex-col items-center md:items-start">
                 <div className="flex items-center mb-4">
-                  <Phone className="h-5 w-5 mr-2 text-blue-200" />
+                  <MessageCircle className="mr-2 h-5 w-5" />
                   <span className="font-medium">WhatsApp</span>
                 </div>
                 <p className="text-blue-200">(66) 99979-1304</p>
