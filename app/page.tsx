@@ -89,7 +89,7 @@ export default function NeuropsicologiaSite() {
                 onClick={() => window.open(whatsappUrl, "_blank")}
               >
                 <MessageCircle className="mr-2 h-4 w-4" />
-                Agendar Avaliação
+                Agendar consulta
               </Button>
             </div>
 
@@ -209,8 +209,8 @@ export default function NeuropsicologiaSite() {
           >
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
             <MessageCircle className="mr-2 h-5 w-5 sm:h-6 sm:w-6" />
-            <span className="hidden sm:inline">Agende sua avaliação pelo WhatsApp</span>
-            <span className="sm:hidden">Agendar pelo WhatsApp</span>
+            <span className="hidden sm:inline">Agendar consulta</span>
+            <span className="sm:hidden">Agendar consulta</span>
           </Button>
         </div>
 
