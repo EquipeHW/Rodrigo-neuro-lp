@@ -85,11 +85,8 @@ export default function NeuropsicologiaSite() {
             {/* CTA Button */}
             <div className="hidden lg:block">
               <Button
-                className="text-white px-6 py-2 rounded-lg font-medium transition-all duration-300"
-                style={{ backgroundColor: "#002147" }}
+                className="text-white px-6 py-2 rounded-lg font-medium transition-all duration-300 bg-[#002147] hover:bg-[#001a36]"
                 onClick={() => window.open(whatsappUrl, "_blank")}
-                onMouseEnter={(e) => (e.target.style.backgroundColor = "#001a36")}
-                onMouseLeave={(e) => (e.target.style.backgroundColor = "#002147")}
               >
                 <MessageCircle className="mr-2 h-4 w-4" />
                 Agendar Avaliação
@@ -153,7 +150,7 @@ export default function NeuropsicologiaSite() {
                   onClick={() => window.open(whatsappUrl, "_blank")}
                 >
                   <MessageCircle className="mr-2 h-4 w-4" />
-                  Agendar Avaliação
+                  Agendar consulta
                 </Button>
               </div>
             </div>
@@ -220,7 +217,7 @@ export default function NeuropsicologiaSite() {
               <div className="relative flex justify-center lg:justify-end">
                 <div className="relative">
                   {/* Fundo científico minimalista */}
-                  <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-full bg-gray-100 relative overflow-hidden shadow-2xl">
+                  <div className="w-80 h-80 lg:w-[40rem] lg:h-[40rem] rounded-full bg-gray-100 relative overflow-hidden shadow-2xl flex items-center justify-center">
                     {/* Elementos decorativos científicos */}
                     <div className="absolute top-8 left-8 w-12 h-12 bg-gray-200 rounded-full opacity-40"></div>
                     <div className="absolute bottom-12 right-12 w-8 h-8 bg-gray-300 rounded-full opacity-30"></div>
@@ -239,16 +236,14 @@ export default function NeuropsicologiaSite() {
                       </svg>
                     </div>
 
-                    {/* Área central para a foto */}
-                    <div className="absolute inset-8 rounded-full bg-white shadow-lg flex items-center justify-center overflow-hidden">
-                      <Image
-                        src="/rodrigo1.jpg"
-                        alt="Psicólogo Rodrigo Lübke"
-                        width={600}
-                        height={600}
-                        className="w-full h-full object-cover object-[center_30%]"
-                      />
-                    </div>
+                    {/* A imagem diretamente dentro deste container */}
+                    <Image
+                      src="/rodrigo1.jpg"
+                      alt="Psicólogo Rodrigo Lübke"
+                      width={1000}
+                      height={1000}
+                      className="w-full h-full object-cover object-[center_30%] rounded-full"
+                    />
                   </div>
 
                   {/* Elementos decorativos externos */}
@@ -476,7 +471,7 @@ export default function NeuropsicologiaSite() {
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
                 <MessageCircle className="mr-2 h-5 w-5" />
-                Agende sua avaliação pelo WhatsApp
+                Agendar consulta
               </Button>
             </div>
           </div>
@@ -642,7 +637,7 @@ export default function NeuropsicologiaSite() {
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
                   <MessageCircle className="mr-2 h-5 w-5" />
-                  Agende sua avaliação
+                  Agendar consulta
                 </Button>
               </div>
 
@@ -893,7 +888,7 @@ export default function NeuropsicologiaSite() {
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
                 <MessageCircle className="mr-2 h-5 w-5" />
-                Tire suas dúvidas no WhatsApp
+                Agendar consulta
               </Button>
             </div>
           </div>
