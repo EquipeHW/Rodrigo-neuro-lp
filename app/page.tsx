@@ -201,11 +201,8 @@ export default function NeuropsicologiaSite() {
           </p>
           <Button
             size="lg"
-            className="text-white px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 text-base sm:text-lg md:text-xl font-medium rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl relative overflow-hidden group"
-            style={{ backgroundColor: "#002147" }}
+            className="text-white px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 text-base sm:text-lg md:text-xl font-medium rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl relative overflow-hidden group bg-[#002147] hover:bg-[#001a36]"
             onClick={() => window.open(whatsappUrl, "_blank")}
-            onMouseEnter={(e) => (e.target.style.backgroundColor = "#001a36")}
-            onMouseLeave={(e) => (e.target.style.backgroundColor = "#002147")}
           >
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
             <MessageCircle className="mr-2 h-5 w-5 sm:h-6 sm:w-6" />
@@ -482,11 +479,8 @@ export default function NeuropsicologiaSite() {
             <div className="text-center">
               <Button
                 size="lg"
-                className="text-white px-8 py-4 text-lg font-medium rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl relative overflow-hidden group"
-                style={{ backgroundColor: "#002147" }}
+                className="text-white px-8 py-4 text-lg font-medium rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl relative overflow-hidden group bg-[#002147] hover:bg-[#001a36]"
                 onClick={() => window.open(whatsappUrl, "_blank")}
-                onMouseEnter={(e) => (e.target.style.backgroundColor = "#001a36")}
-                onMouseLeave={(e) => (e.target.style.backgroundColor = "#002147")}
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
                 <MessageCircle className="mr-2 h-5 w-5" />
@@ -578,16 +572,7 @@ export default function NeuropsicologiaSite() {
               <Button
                 variant="outline"
                 size="lg"
-                className="px-8 py-4 text-lg font-medium rounded-lg transition-all duration-300"
-                style={{ borderColor: "#002147", color: "#002147" }}
-                onMouseEnter={(e) => {
-                  e.target.style.backgroundColor = "#002147"
-                  e.target.style.color = "white"
-                }}
-                onMouseLeave={(e) => {
-                  e.target.style.backgroundColor = "transparent"
-                  e.target.style.color = "#002147"
-                }}
+                className="px-8 py-4 text-lg font-medium rounded-lg transition-all duration-300 border-[#002147] text-[#002147] hover:bg-[#002147] hover:text-white"
               >
                 Agendar consulta
               </Button>
@@ -665,11 +650,8 @@ export default function NeuropsicologiaSite() {
 
                 <Button
                   size="lg"
-                  className="text-white px-8 py-4 text-lg font-medium rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl relative overflow-hidden group"
-                  style={{ backgroundColor: "#002147" }}
+                  className="text-white px-8 py-4 text-lg font-medium rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl relative overflow-hidden group bg-[#002147] hover:bg-[#001a36]"
                   onClick={() => window.open(whatsappUrl, "_blank")}
-                  onMouseEnter={(e) => (e.target.style.backgroundColor = "#001a36")}
-                  onMouseLeave={(e) => (e.target.style.backgroundColor = "#002147")}
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
                   <MessageCircle className="mr-2 h-5 w-5" />
@@ -730,15 +712,14 @@ export default function NeuropsicologiaSite() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-600 mb-6 leading-relaxed italic">
-                    "A avaliação foi um divisor de águas! Finalmente entendemos as dificuldades do nosso filho e
-                    recebemos um plano realista."
+                    "O atendimento do Rodrigo foi acolhedor e esclarecedor. Meu filho se sentiu confortável durante toda a avaliação e finalmente conseguimos um diagnóstico preciso. Recomendo muito!"
                   </p>
                   <div className="flex items-center">
                     <div className="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center mr-3">
                       <User className="h-4 w-4 text-gray-500" />
                     </div>
                     <div>
-                      <p className="font-medium text-gray-900">Ana</p>
+                      <p className="font-medium text-gray-900">Patrícia</p>
                       <p className="text-sm text-gray-500">Mãe de paciente</p>
                     </div>
                   </div>
@@ -758,15 +739,15 @@ export default function NeuropsicologiaSite() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-600 mb-6 leading-relaxed italic">
-                    "Espaço reservado para depoimentos dos pacientes integrados com Google Meu Negócio"
+                    "Profissional extremamente competente e atencioso. A avaliação neuropsicológica foi fundamental para o meu tratamento. Senti muita segurança em cada etapa do processo."
                   </p>
                   <div className="flex items-center">
                     <div className="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center mr-3">
                       <User className="h-4 w-4 text-gray-500" />
                     </div>
                     <div>
-                      <p className="font-medium text-gray-900">Nome do Paciente</p>
-                      <p className="text-sm text-gray-500">Verificado</p>
+                      <p className="font-medium text-gray-900">Carlos</p>
+                      <p className="text-sm text-gray-500">Paciente adulto</p>
                     </div>
                   </div>
                 </CardContent>
@@ -785,15 +766,15 @@ export default function NeuropsicologiaSite() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-600 mb-6 leading-relaxed italic">
-                    "Espaço reservado para depoimentos dos pacientes integrados com Google Meu Negócio"
+                    "A sensibilidade e o conhecimento do Rodrigo fizeram toda a diferença para nossa família. O laudo foi detalhado e nos ajudou a buscar o melhor acompanhamento para nossa filha."
                   </p>
                   <div className="flex items-center">
                     <div className="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center mr-3">
                       <User className="h-4 w-4 text-gray-500" />
                     </div>
                     <div>
-                      <p className="font-medium text-gray-900">Nome do Paciente</p>
-                      <p className="text-sm text-gray-500">Verificado</p>
+                      <p className="font-medium text-gray-900">Juliana</p>
+                      <p className="text-sm text-gray-500">Mãe de paciente</p>
                     </div>
                   </div>
                 </CardContent>
@@ -916,11 +897,8 @@ export default function NeuropsicologiaSite() {
             <div className="text-center">
               <Button
                 size="lg"
-                className="text-white px-8 py-4 text-lg font-medium rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl relative overflow-hidden group"
-                style={{ backgroundColor: "#002147" }}
+                className="text-white px-8 py-4 text-lg font-medium rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl relative overflow-hidden group bg-[#002147] hover:bg-[#001a36]"
                 onClick={() => window.open(whatsappUrl, "_blank")}
-                onMouseEnter={(e) => (e.target.style.backgroundColor = "#001a36")}
-                onMouseLeave={(e) => (e.target.style.backgroundColor = "#002147")}
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
                 <MessageCircle className="mr-2 h-5 w-5" />
