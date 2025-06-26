@@ -31,10 +31,6 @@ import { useEffect } from "react"
 import Head from "next/head"
 
 export default function NeuropsicologiaSite() {
-  const whatsappNumber = "5566999791304"
-  const whatsappMessage = "Olá! Gostaria de agendar uma avaliação neuropsicológica com o psicólogo Rodrigo Lübke."
-  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`
-
   useEffect(() => {
     // Smooth scroll behavior
     document.documentElement.style.scrollBehavior = "smooth"
@@ -101,13 +97,15 @@ export default function NeuropsicologiaSite() {
 
               {/* CTA Button */}
               <div className="hidden lg:block">
-                <Button
-                  className="text-white px-6 py-2 rounded-lg font-medium transition-all duration-300 bg-[#002147] hover:bg-[#001a36]"
-                  onClick={() => window.open(whatsappUrl, "_blank")}
+                <a
+                  href="https://wa.me/5566999791304?text=Ol%C3%A1!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20a%20avalia%C3%A7%C3%A3o%20neuropsicol%C3%B3gica."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center text-white px-6 py-2 rounded-lg font-medium transition-all duration-300 bg-[#002147] hover:bg-[#001a36] gap-2"
                 >
-                  <MessageCircle className="mr-2 h-4 w-4" />
+                  <span className="mr-2"><MessageCircle className="h-4 w-4" /></span>
                   Agendar consulta
-                </Button>
+                </a>
               </div>
 
               {/* Mobile Menu Button */}
@@ -161,14 +159,16 @@ export default function NeuropsicologiaSite() {
                   FAQ
                 </a>
                 <div className="pt-4 border-t border-gray-100">
-                  <Button
-                    className="w-full text-white px-6 py-2 rounded-lg font-medium"
+                  <a
+                    href="https://wa.me/5566999791304?text=Ol%C3%A1!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20a%20avalia%C3%A7%C3%A3o%20neuropsicol%C3%B3gica."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full inline-flex items-center text-white px-6 py-2 rounded-lg font-medium transition-all duration-300 bg-[#002147] hover:bg-[#001a36] gap-2 justify-center"
                     style={{ backgroundColor: "#002147" }}
-                    onClick={() => window.open(whatsappUrl, "_blank")}
                   >
-                    <MessageCircle className="mr-2 h-4 w-4" />
+                    <span className="mr-2"><MessageCircle className="h-4 w-4" /></span>
                     Agendar consulta
-                  </Button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -216,16 +216,16 @@ export default function NeuropsicologiaSite() {
                   <p className="text-xl lg:text-2xl text-gray-600 mb-12 font-light leading-relaxed">
                     Especialista em neuropsicologia. Clareza diagnóstica e emocional para adultos e crianças em Sinop/MT.
                   </p>
-                  <Button
-                    size="lg"
-                    className="text-white px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 text-base sm:text-lg md:text-xl font-medium rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl relative overflow-hidden group bg-[#002147] hover:bg-[#001a36]"
-                    onClick={() => window.open(whatsappUrl, "_blank")}
+                  <a
+                    href="https://wa.me/5566999791304?text=Ol%C3%A1!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20a%20avalia%C3%A7%C3%A3o%20neuropsicol%C3%B3gica."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-white px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 text-base sm:text-lg md:text-xl font-medium rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl bg-[#002147] hover:bg-[#001a36] gap-2 relative overflow-hidden group"
                   >
-                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
-                    <MessageCircle className="mr-2 h-5 w-5 sm:h-6 sm:w-6" />
+                    <span className="mr-2"><MessageCircle className="h-5 w-5 sm:h-6 sm:w-6" /></span>
                     <span className="hidden sm:inline">Agendar consulta</span>
                     <span className="sm:hidden">Agendar consulta</span>
-                  </Button>
+                  </a>
                 </div>
 
                 {/* Área da Foto - Lado Direito */}
@@ -494,15 +494,15 @@ export default function NeuropsicologiaSite() {
               </div>
 
               <div className="text-center">
-                <Button
-                  size="lg"
-                  className="text-white px-8 py-4 text-lg font-medium rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl relative overflow-hidden group bg-[#002147] hover:bg-[#001a36]"
-                  onClick={() => window.open(whatsappUrl, "_blank")}
+                <a
+                  href="https://wa.me/5566999791304?text=Ol%C3%A1!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20a%20avalia%C3%A7%C3%A3o%20neuropsicol%C3%B3gica."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center text-white px-8 py-4 text-lg font-medium rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl bg-[#002147] hover:bg-[#001a36] gap-2 relative overflow-hidden group"
                 >
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
-                  <MessageCircle className="mr-2 h-5 w-5" />
+                  <span className="mr-2"><MessageCircle className="h-5 w-5" /></span>
                   Agendar consulta
-                </Button>
+                </a>
               </div>
             </div>
           </div>
@@ -586,13 +586,15 @@ export default function NeuropsicologiaSite() {
               </div>
 
               <div className="text-center">
-                <Button
-                  variant="outline"
-                  size="lg"
-                  className="px-8 py-4 text-lg font-medium rounded-lg transition-all duration-300 border-[#002147] text-[#002147] hover:bg-[#002147] hover:text-white"
+                <a
+                  href="https://wa.me/5566999791304?text=Ol%C3%A1!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20a%20avalia%C3%A7%C3%A3o%20neuropsicol%C3%B3gica."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center text-white px-8 py-4 text-lg font-medium rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl bg-[#002147] hover:bg-[#001a36] gap-2 relative overflow-hidden group"
                 >
+                  <span className="mr-2"><MessageCircle className="h-5 w-5" /></span>
                   Agendar consulta
-                </Button>
+                </a>
               </div>
             </div>
           </div>
@@ -665,15 +667,15 @@ export default function NeuropsicologiaSite() {
                     </div>
                   </div>
 
-                  <Button
-                    size="lg"
-                    className="text-white px-8 py-4 text-lg font-medium rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl relative overflow-hidden group bg-[#002147] hover:bg-[#001a36]"
-                    onClick={() => window.open(whatsappUrl, "_blank")}
+                  <a
+                    href="https://wa.me/5566999791304?text=Ol%C3%A1!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20a%20avalia%C3%A7%C3%A3o%20neuropsicol%C3%B3gica."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-white px-8 py-4 text-lg font-medium rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl bg-[#002147] hover:bg-[#001a36] gap-2 relative overflow-hidden group"
                   >
-                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
-                    <MessageCircle className="mr-2 h-5 w-5" />
+                    <span className="mr-2"><MessageCircle className="h-5 w-5" /></span>
                     Agendar consulta
-                  </Button>
+                  </a>
                 </div>
 
                 <div className="flex justify-center relative">
@@ -912,15 +914,15 @@ export default function NeuropsicologiaSite() {
               </Accordion>
 
               <div className="text-center">
-                <Button
-                  size="lg"
-                  className="text-white px-8 py-4 text-lg font-medium rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl relative overflow-hidden group bg-[#002147] hover:bg-[#001a36]"
-                  onClick={() => window.open(whatsappUrl, "_blank")}
+                <a
+                  href="https://wa.me/5566999791304?text=Ol%C3%A1!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20a%20avalia%C3%A7%C3%A3o%20neuropsicol%C3%B3gica."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center text-white px-8 py-4 text-lg font-medium rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl bg-[#002147] hover:bg-[#001a36] gap-2 relative overflow-hidden group"
                 >
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
-                  <MessageCircle className="mr-2 h-5 w-5" />
+                  <span className="mr-2"><MessageCircle className="h-5 w-5" /></span>
                   Agendar consulta
-                </Button>
+                </a>
               </div>
             </div>
           </div>
